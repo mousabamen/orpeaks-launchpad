@@ -79,7 +79,7 @@ const DeepDives = () => {
               />
             </div>
             <div className="anim-image">
-              <lottie-player src="" background="transparent" speed="1" loop autoplay></lottie-player>
+              {/* Lottie animation placeholder */}
             </div>
           </div>
         </section>
