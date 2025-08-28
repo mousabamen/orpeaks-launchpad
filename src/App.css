@@ -31,7 +31,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--orpeaks-deep-pine));
+  background: hsl(var(--orpeaks-background));
 }
 
 ::-webkit-scrollbar-thumb {

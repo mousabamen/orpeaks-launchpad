@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -56,15 +57,15 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				// ORPEAKS brand colors
-				orpeaks: {
-					'deep-pine': 'hsl(var(--orpeaks-deep-pine))',
-					'section-bg': 'hsl(var(--orpeaks-section-bg))',
-					'border': 'hsl(var(--orpeaks-border))',
-					'text-main': 'hsl(var(--orpeaks-text-main))',
-					'text-muted': 'hsl(var(--orpeaks-text-muted))',
-					'accent': 'hsl(var(--orpeaks-accent))',
-					'accent-hover': 'hsl(var(--orpeaks-accent-hover))',
-				}
+                                orpeaks: {
+                                        background: 'hsl(var(--orpeaks-background))',
+                                        'section-bg': 'hsl(var(--orpeaks-section-bg))',
+                                        border: 'hsl(var(--orpeaks-border))',
+                                        'text-main': 'hsl(var(--orpeaks-text-main))',
+                                        'text-muted': 'hsl(var(--orpeaks-text-muted))',
+                                        accent: 'hsl(var(--orpeaks-accent))',
+                                        'accent-hover': 'hsl(var(--orpeaks-accent-hover))',
+                                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -95,5 +96,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+        plugins: [animate],
 } satisfies Config;

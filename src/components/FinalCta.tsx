@@ -1,3 +1,5 @@
+import StartTrialModal from "./StartTrialModal";
+
 const FinalCta = () => {
   return (
     <section id="start" className="py-24 bg-orpeaks-section-bg/40">
@@ -9,9 +11,10 @@ const FinalCta = () => {
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
             Join thousands of entrepreneurs who have chosen ORPEAKS to power their online stores.
           </p>
-          <a href="#" className="btn-primary inline-flex items-center justify-center text-lg px-8 py-4">
-            Get Started Today
-          </a>
+          <StartTrialModal
+            triggerText="Get Started Today"
+            className="btn-primary inline-flex items-center justify-center text-lg px-8 py-4"
+          />
         </div>
       </div>
     </section>

@@ -7,16 +7,16 @@
 @layer base {
   :root {
     /* ORPEAKS Brand Colors (HSL) */
-    --orpeaks-deep-pine: 166 75% 5%; /* #051C15 - Page background */
-    --orpeaks-section-bg: 166 76% 8%; /* #072720 - Section/Card background */
-    --orpeaks-border: 166 49% 15%; /* #133B32 - Borders */
-    --orpeaks-text-main: 0 0% 88%; /* #E0E0E0 - Main text */
-    --orpeaks-text-muted: 0 0% 63%; /* #A0A0A0 - Muted text */
-    --orpeaks-accent: 154 89% 58%; /* #36F4A4 - Accent Avocado */
-    --orpeaks-accent-hover: 154 75% 52%; /* #2AD98C - Accent hover */
+    --orpeaks-background: 0 0% 95%; /* #f3f3f3 - Page background */
+    --orpeaks-section-bg: 0 0% 100%; /* #ffffff - Section/Card background */
+    --orpeaks-border: 0 0% 90%; /* #e5e5e5 - Borders */
+    --orpeaks-text-main: 0 0% 10%; /* #1a1a1a - Main text */
+    --orpeaks-text-muted: 0 0% 40%; /* #666666 - Muted text */
+    --orpeaks-accent: 154 89% 58%; /* Brand green */
+    --orpeaks-accent-hover: 154 75% 52%;
 
     /* Semantic design tokens */
-    --background: var(--orpeaks-deep-pine);
+    --background: var(--orpeaks-background);
     --foreground: var(--orpeaks-text-main);
 
     --card: var(--orpeaks-section-bg);
@@ -26,7 +26,7 @@
     --popover-foreground: var(--orpeaks-text-main);
 
     --primary: var(--orpeaks-accent);
-    --primary-foreground: var(--orpeaks-deep-pine);
+    --primary-foreground: 0 0% 100%;
 
     --secondary: var(--orpeaks-section-bg);
     --secondary-foreground: var(--orpeaks-text-main);
@@ -35,10 +35,10 @@
     --muted-foreground: var(--orpeaks-text-muted);
 
     --accent: var(--orpeaks-accent);
-    --accent-foreground: var(--orpeaks-deep-pine);
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: var(--orpeaks-text-main);
+    --destructive-foreground: 0 0% 98%;
 
     --border: var(--orpeaks-border);
     --input: var(--orpeaks-border);
@@ -46,13 +46,9 @@
 
     --radius: 0.5rem;
 
-    /* Custom gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(var(--orpeaks-deep-pine)), hsl(166 67% 9%));
-    --card-gradient: linear-gradient(135deg, hsla(var(--orpeaks-section-bg), 0.6), hsla(var(--orpeaks-section-bg), 0.8));
-    
     /* Animation easing */
     --ease-orpeaks: cubic-bezier(0.16, 1, 0.3, 1);
-    
+
     /* MENA badge colors */
     --mena-ring: var(--orpeaks-accent);
     --mena-dots: var(--orpeaks-accent);
@@ -93,15 +89,20 @@
   
   /* Button variants */
   .btn-primary {
-    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md transition-colors duration-200;
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md transition-colors duration-200 transform transition-transform;
   }
-  
+
   .btn-primary:hover {
     background-color: hsl(var(--orpeaks-accent-hover));
+    @apply scale-105;
   }
-  
+
   .btn-outline {
-    @apply border border-primary text-primary bg-transparent font-semibold px-6 py-3 rounded-md transition-all duration-200 hover:bg-primary/10;
+    @apply border border-primary text-primary bg-transparent font-semibold px-6 py-3 rounded-md transition-all duration-200 hover:bg-primary/10 transform transition-transform;
+  }
+
+  .btn-outline:hover {
+    @apply scale-105;
   }
   
   /* MENA badge */
