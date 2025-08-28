@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import WhyOrpeaks from "@/components/WhyOrpeaks";
+import LaunchStrip from "@/components/LaunchStrip";
 import FeatureTiles from "@/components/FeatureTiles";
 import CommerceShowcase from "@/components/CommerceShowcase";
 import SolutionHeader from "@/components/SolutionHeader";
@@ -15,7 +16,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* SEO Meta tags handled in index.html */}
-      
+
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -33,12 +34,13 @@ const Index = () => {
           })
         }}
       />
-      
+
       <Navigation />
-      
+
       <main>
         <Hero />
         <WhyOrpeaks />
+        <LaunchStrip />
         <FeatureTiles />
         <CommerceShowcase />
         <SolutionHeader />
@@ -47,7 +49,7 @@ const Index = () => {
         <Testimonial />
         <FinalCta />
       </main>
-      
+
       <Footer />
       <Toaster />
     </div>

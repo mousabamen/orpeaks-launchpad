@@ -1,31 +1,20 @@
-import ContactForm from './ContactForm';
+import StartTrialModal from "./StartTrialModal";
 
 const Navigation = () => {
-  const navItems = [
-    { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Resources", href: "#resources" },
-  ];
-
   return (
-    <header id="Navigation" className="site-header alignfull">
-      <div className="nav-inner">
-        <a className="brand" href="/">
+    <header id="Navigation" className="bg-white/80 backdrop-blur border-b border-border">
+      <div className="container-orpeaks flex items-center justify-between py-4">
+        <a href="/" className="text-xl font-bold text-foreground">
           ORPEAKS
         </a>
-        <nav className="primary-nav">
-          {navItems.map((item) => (
-            <a key={item.label} href={item.href}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
-        <div className="nav-cta">
-          <ContactForm />
-          <a href="#login">Log in</a>
-          <a href="#start" className="btn blue">
-            Start free trial
+        <div className="flex items-center gap-6">
+          <a
+            href="mailto:contact@orpeaks.com"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
+            Contact Us
           </a>
+          <StartTrialModal className="btn-primary text-sm" />
         </div>
       </div>
     </header>
