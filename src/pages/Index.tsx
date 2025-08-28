@@ -41,6 +41,15 @@ const Index = () => {
       <main>
         <Hero />
         <Features />
+        <WhyOrpeaks />
+        <LaunchStrip />
+        <FeatureTiles />
+        <CommerceShowcase />
+        <SolutionHeader />
+        <DeepDives />
+        <MenaFocus />
+        <Testimonial />
+        <FinalCta />
       </main>
       
       <Footer />
