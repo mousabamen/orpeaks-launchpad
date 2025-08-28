@@ -1,11 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import WhyOrpeaks from "@/components/WhyOrpeaks";
-import LaunchStrip from "@/components/LaunchStrip";
 import FeatureTiles from "@/components/FeatureTiles";
 import CommerceShowcase from "@/components/CommerceShowcase";
-import SolutionHeader from "@/components/SolutionHeader";
-import DeepDives from "@/components/DeepDives";
+import UseCaseGrid from "@/components/UseCaseGrid";
+import StoriesGrid from "@/components/StoriesGrid";
 import MenaFocus from "@/components/MenaFocus";
 import Testimonial from "@/components/Testimonial";
 import FinalCta from "@/components/FinalCta";
@@ -35,25 +34,24 @@ const Index = () => {
         }}
       />
       
-      <Navigation />
-      
-      <main>
-        <Hero />
-        <WhyOrpeaks />
-        <LaunchStrip />
-        <FeatureTiles />
-        <CommerceShowcase />
-        <SolutionHeader />
-        <DeepDives />
-        <MenaFocus />
-        <Testimonial />
-        <FinalCta />
-      </main>
-      
-      <Footer />
-      <Toaster />
-    </div>
-  );
-};
+        <Navigation />
+
+        <main>
+          <Hero />
+          <WhyOrpeaks />
+          <FeatureTiles />
+          <CommerceShowcase />
+          <UseCaseGrid />
+          <StoriesGrid />
+          <MenaFocus />
+          <Testimonial />
+          <FinalCta />
+        </main>
+
+        <Footer />
+        <Toaster />
+      </div>
+    );
+  };
 
 export default Index;

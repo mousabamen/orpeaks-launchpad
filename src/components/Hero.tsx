@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 const Hero = () => {
   const wordsRef = useRef<HTMLDivElement>(null);
+  const partnerLogos = ["KFC", "GoDaddy", "Bonobos", "Bookshop", "Huckberry", "Paneco"];
 
   useEffect(() => {
     const words = wordsRef.current?.querySelectorAll('.hero-word');
@@ -43,27 +45,59 @@ const Hero = () => {
               <span className="hero-word inline-block">thing</span>
             </div>
           </h1>
-          
+
           {/* Supporting paragraph */}
           <p className="text-xl sm:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             ORPEAKS gives you everything you need to start and grow your online business in the MENA region.
           </p>
-          
+
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="#start" 
+            <a
+              href="#start"
               className="btn-primary inline-flex items-center justify-center min-w-[180px]"
             >
               Start for Free
             </a>
-            <a 
-              href="#features" 
+            <a
+              href="#features"
               className="btn-outline inline-flex items-center justify-center min-w-[180px]"
             >
               Explore Features
             </a>
           </div>
+
+          {/* Partner logos */}
+          <div className="mt-16">
+            <p className="text-sm text-muted-foreground mb-4">Trusted by leading brands</p>
+            <div className="marquee">
+              <div className="marquee-content">
+                {partnerLogos.concat(partnerLogos).map((logo, index) => (
+                  <div
+                    key={index}
+                    className="text-muted-foreground/70 font-semibold text-xl whitespace-nowrap mx-6"
+                  >
+                    {logo}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Release badge */}
+      <div className="absolute top-8 right-8 text-right">
+        <div className="bg-primary/10 border border-primary/20 rounded-lg px-4 py-3">
+          <p className="text-xs uppercase text-primary mb-1">ORPEAKS</p>
+          <p className="text-sm font-semibold leading-snug text-foreground">
+            The Biggest
+            <br />
+            Release Ever
+          </p>
+          <a href="#" className="mt-2 inline-block text-primary">
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
       

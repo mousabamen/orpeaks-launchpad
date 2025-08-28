@@ -122,6 +122,22 @@
   .container-orpeaks {
     @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+
+  /* Marquee animation for partner logos */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .marquee {
+    @apply overflow-hidden;
+  }
+
+  .marquee-content {
+    @apply flex items-center gap-12;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+  }
   
   /* Reduced motion support */
   @media (prefers-reduced-motion: reduce) {
