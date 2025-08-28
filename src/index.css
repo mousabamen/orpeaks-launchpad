@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ORPEAKS Design System - Dark theme optimized for MENA eCommerce platform */
+/* ORPEAKS Design System - Light theme inspired by modern commerce platforms */
 
 @layer base {
   :root {
     /* ORPEAKS Brand Colors (HSL) */
-    --orpeaks-deep-pine: 166 75% 5%; /* #051C15 - Page background */
-    --orpeaks-section-bg: 166 76% 8%; /* #072720 - Section/Card background */
-    --orpeaks-border: 166 49% 15%; /* #133B32 - Borders */
-    --orpeaks-text-main: 0 0% 88%; /* #E0E0E0 - Main text */
-    --orpeaks-text-muted: 0 0% 63%; /* #A0A0A0 - Muted text */
-    --orpeaks-accent: 154 89% 58%; /* #36F4A4 - Accent Avocado */
-    --orpeaks-accent-hover: 154 75% 52%; /* #2AD98C - Accent hover */
+    --orpeaks-deep-pine: 0 0% 95%; /* #f3f3f3 - Page background */
+    --orpeaks-section-bg: 0 0% 100%; /* #ffffff - Section/Card background */
+    --orpeaks-border: 0 0% 85%; /* #d6d6d6 - Borders */
+    --orpeaks-text-main: 240 10% 3.9%; /* #0a0a0a - Main text */
+    --orpeaks-text-muted: 0 0% 40%; /* #666666 - Muted text */
+    --orpeaks-accent: 142 76% 36%; /* Brand green */
+    --orpeaks-accent-hover: 142 70% 31%; /* Darker brand green for hover */
 
     /* Semantic design tokens */
     --background: var(--orpeaks-deep-pine);
@@ -26,19 +26,19 @@
     --popover-foreground: var(--orpeaks-text-main);
 
     --primary: var(--orpeaks-accent);
-    --primary-foreground: var(--orpeaks-deep-pine);
+    --primary-foreground: var(--orpeaks-section-bg);
 
     --secondary: var(--orpeaks-section-bg);
     --secondary-foreground: var(--orpeaks-text-main);
 
-    --muted: var(--orpeaks-section-bg);
+    --muted: 0 0% 97%;
     --muted-foreground: var(--orpeaks-text-muted);
 
     --accent: var(--orpeaks-accent);
-    --accent-foreground: var(--orpeaks-deep-pine);
+    --accent-foreground: var(--orpeaks-section-bg);
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: var(--orpeaks-text-main);
+    --destructive-foreground: var(--orpeaks-section-bg);
 
     --border: var(--orpeaks-border);
     --input: var(--orpeaks-border);
@@ -47,12 +47,12 @@
     --radius: 0.5rem;
 
     /* Custom gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(var(--orpeaks-deep-pine)), hsl(166 67% 9%));
+    --hero-gradient: linear-gradient(135deg, hsl(var(--orpeaks-section-bg)), hsl(0 0% 98%));
     --card-gradient: linear-gradient(135deg, hsla(var(--orpeaks-section-bg), 0.6), hsla(var(--orpeaks-section-bg), 0.8));
-    
+
     /* Animation easing */
     --ease-orpeaks: cubic-bezier(0.16, 1, 0.3, 1);
-    
+
     /* MENA badge colors */
     --mena-ring: var(--orpeaks-accent);
     --mena-dots: var(--orpeaks-accent);
