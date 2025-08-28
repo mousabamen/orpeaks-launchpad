@@ -1,6 +1,15 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import WhyOrpeaks from "@/components/WhyOrpeaks";
+import LaunchStrip from "@/components/LaunchStrip";
+import FeatureTiles from "@/components/FeatureTiles";
+import CommerceShowcase from "@/components/CommerceShowcase";
+import SolutionHeader from "@/components/SolutionHeader";
+import DeepDives from "@/components/DeepDives";
+import MenaFocus from "@/components/MenaFocus";
+import Testimonial from "@/components/Testimonial";
+import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
