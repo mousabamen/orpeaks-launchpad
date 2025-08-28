@@ -1,7 +1,5 @@
-import React from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
 import WhyOrpeaks from "@/components/WhyOrpeaks";
 import LaunchStrip from "@/components/LaunchStrip";
 import FeatureTiles from "@/components/FeatureTiles";
@@ -41,7 +39,6 @@ const Index = () => {
       
       <main>
         <Hero />
-        <Features />
         <WhyOrpeaks />
         <LaunchStrip />
         <FeatureTiles />
