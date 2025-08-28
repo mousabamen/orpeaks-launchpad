@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import WhyOrpeaks from "@/components/WhyOrpeaks";
 import LaunchStrip from "@/components/LaunchStrip";
 import FeatureTiles from "@/components/FeatureTiles";
+import CommerceShowcase from "@/components/CommerceShowcase";
 import SolutionHeader from "@/components/SolutionHeader";
 import DeepDives from "@/components/DeepDives";
 import MenaFocus from "@/components/MenaFocus";
@@ -41,6 +42,7 @@ const Index = () => {
         <WhyOrpeaks />
         <LaunchStrip />
         <FeatureTiles />
+        <CommerceShowcase />
         <SolutionHeader />
         <DeepDives />
         <MenaFocus />
