@@ -1,78 +1,62 @@
-import { useEffect, useRef } from 'react';
-
 const Hero = () => {
-  const wordsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const words = wordsRef.current?.querySelectorAll('.hero-word');
-    if (!words) return;
-
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    if (prefersReducedMotion) {
-      words.forEach(word => word.classList.add('animate-in'));
-      return;
-    }
-
-    // Stagger the animation
-    words.forEach((word, index) => {
-      setTimeout(() => {
-        word.classList.add('animate-in');
-      }, index * 200);
-    });
-  }, []);
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient background */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-br from-background via-background to-orpeaks-section-bg"
-        style={{ background: 'var(--hero-gradient)' }}
-      />
-      
-      <div className="relative z-10 container-orpeaks text-center">
-        <div className="max-w-4xl mx-auto">
-          {/* Animated headline */}
-          <h1 className="mb-6 font-light tracking-wide">
-            <div className="text-5xl sm:text-6xl lg:text-7xl text-foreground mb-2">
-              Be the next
+    <section id="Hero" className="home-header-wrap alignfull text-align-left">
+      <div className="home-header">
+        <div className="container-flex">
+          <div className="desc-wrap">
+            <div className="desc">
+              <h1>Be the next big thing</h1>
+              <p>ORPEAKS gives you everything you need to start and grow your online business in the MENA region.</p>
+              <div className="buttons-wrap">
+                <a href="#start" className="btn blue large">Start for Free</a>
+                <a href="#features" className="btn white large">Explore Features</a>
+              </div>
             </div>
-            <div ref={wordsRef} className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary">
-              <span className="hero-word inline-block me-4">big</span>
-              <span className="hero-word inline-block">thing</span>
+
+            <div className="visual">
+              <picture>
+                <source width="1848" height="2020" srcSet="https://spreecommerce.org/wp-content/themes/spree/images/home-visual.webp" media="(min-width: 1025px)" />
+                <source width="1000" height="1093" srcSet="https://spreecommerce.org/wp-content/themes/spree/images/home-visual-mobile.webp" media="(min-width: 768px) and (max-width: 1024px)" />
+                <img width="1" height="1" src="https://spreecommerce.org/wp-content/themes/spree/images/blank.webp" alt="" />
+              </picture>
             </div>
-          </h1>
-          
-          {/* Supporting paragraph */}
-          <p className="text-xl sm:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            ORPEAKS gives you everything you need to start and grow your online business in the MENA region.
-          </p>
-          
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="#start" 
-              className="btn-primary inline-flex items-center justify-center min-w-[180px]"
-            >
-              Start for Free
-            </a>
-            <a 
-              href="#features" 
-              className="btn-outline inline-flex items-center justify-center min-w-[180px]"
-            >
-              Explore Features
-            </a>
+
+            <div className="header-logos-wrap" aria-label="Trusted by logos">
+              <div className="logos-swiper-wrap">
+                <div className="logos-marquee" role="presentation">
+                  <div className="track">
+                    <img width="108" height="40" src="/cdn.../kfc.svg" alt="KFC" />
+                    <img width="108" height="40" src="/cdn.../meundies.svg" alt="MeUndies" />
+                    <img width="108" height="40" src="/cdn.../mitchells.svg" alt="Mitchells" />
+                    <img width="108" height="40" src="/cdn.../on-cloud.svg" alt="On Cloud" />
+                    <img width="108" height="40" src="/cdn.../paneco.svg" alt="Paneco" />
+                    <img width="108" height="40" src="/cdn.../Square_LogoLockup_Black-1.svg" alt="Square" />
+                    <img width="108" height="40" src="/cdn.../stylemyle.svg" alt="Stylemyle" />
+                    <img width="108" height="40" src="/cdn.../bonobos.svg" alt="Bonobos" />
+                    <img width="108" height="40" src="/cdn.../bookshop.svg" alt="Bookshop" />
+                    <img width="108" height="40" src="/cdn.../godaddy.svg" alt="GoDaddy" />
+                    <img width="108" height="40" src="/cdn.../goop.svg" alt="Goop" />
+                    <img width="108" height="40" src="/cdn.../huckberry.svg" alt="Huckberry" />
+
+                    <img width="108" height="40" src="/cdn.../kfc.svg" alt="KFC" aria-hidden="true" />
+                    <img width="108" height="40" src="/cdn.../meundies.svg" alt="MeUndies" aria-hidden="true" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <aside id="LaunchStrip" className="five-info" aria-label="Release highlight">
+            <p className="claim">Bigger, Better, More</p>
+            <p className="five">
+              <img width="120" height="120" src="https://spreecommerce.org/wp-content/themes/spree/images/five.webp" alt="" />
+            </p>
+            <p className="title">The Biggest<br/>Release Ever</p>
+            <a href="#" className="btn-icon lightblue2" aria-label="Read about the release">
+              <img width="24" height="24" src="https://spreecommerce.org/wp-content/themes/spree/images/arrow-right-top.svg" alt="" />
+            </a>
+          </aside>
         </div>
-      </div>
-      
-      {/* Subtle overlay pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--orpeaks-accent)) 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }} />
       </div>
     </section>
   );

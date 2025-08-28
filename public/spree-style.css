@@ -1,0 +1,192 @@
+/* ============ Root & Reset ============ */
+:root{
+  --maxw-wide: 1200px;
+  --pad-x: clamp(16px, 3vw, 32px);
+  --radius-xl: 24px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+
+  --bg: #ffffff;
+  --ink: #0b1220;
+  --muted: #667085;
+  --line: #eceef2;
+
+  --blue: #2f6fed;         /* primary */
+  --blue-600: #1e56d8;
+  --blue-100: #e9f0ff;
+
+  --brand-light: #eef3ff;  /* pills, badges */
+  --brand-ink: #0b1220;
+
+  --shadow-1: 0 8px 24px rgba(16,24,40,0.08);
+  --shadow-2: 0 20px 40px rgba(16,24,40,0.10);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font: 400 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+  text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%; height:auto; display:block}
+
+/* ============ Layout Helpers ============ */
+.alignfull{width:100%}
+.alignwide{max-width:var(--maxw-wide); margin-inline:auto; padding-inline:var(--pad-x)}
+.text-align-left{text-align:left}
+
+.container-flex{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items:center;
+}
+@media (max-width: 1024px){
+  .container-flex{grid-template-columns: 1fr}
+}
+
+.title-wrap > .caption{
+  font-size:.875rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);
+  margin:0 0 .5rem 0;
+}
+.title-wrap h2{margin:.25rem 0 1rem 0; font-size:clamp(28px, 3.2vw, 40px); line-height:1.2}
+.title-wrap p{color:var(--muted); margin: 0}
+
+/* ============ Header / Navigation ============ */
+.site-header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(255,255,255,.8); z-index:100}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw-wide); margin:0 auto; padding:12px var(--pad-x)}
+.brand{font-weight:700; text-decoration:none; color:var(--ink)}
+.primary-nav a{color:var(--ink); text-decoration:none; padding:8px 12px; border-radius:8px}
+.primary-nav a:hover{background:var(--brand-light)}
+
+/* ============ Buttons ============ */
+.buttons-wrap{display:flex; gap:12px; flex-wrap:wrap}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:10px 16px; border-radius:999px; text-decoration:none; font-weight:600; border:1px solid transparent;
+  transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+  will-change:transform;
+}
+.btn.large{padding:14px 22px; font-size:1rem}
+.btn.blue{background:var(--blue); color:#fff; box-shadow: var(--shadow-1)}
+.btn.blue:hover{background:var(--blue-600); transform:translateY(-1px)}
+.btn.white{background:#fff; color:var(--ink); border-color:var(--line)}
+.btn.white:hover{box-shadow:var(--shadow-1)}
+.btn-icon{
+  display:inline-grid; place-items:center; width:44px; height:44px; border-radius:50%; background:var(--blue);
+}
+.btn-icon img{filter:brightness(100) invert(0) saturate(0)}
+
+/* ============ Hero ============ */
+.home-header-wrap{padding: clamp(32px, 6vw, 72px) 0}
+.home-header .desc .caption{margin:0 0 8px 0}
+.home-header h1{margin:.25rem 0 1rem 0; font-size: clamp(32px, 4vw, 52px); line-height:1.1}
+.home-header .desc p{margin:0 0 1.25rem 0; color:var(--muted)}
+.visual picture, .visual img{border-radius: var(--radius-xl); box-shadow: var(--shadow-2)}
+
+/* ============ Release Badge (right column) ============ */
+.five-info{
+  justify-self:end; align-self:stretch;
+  display:grid; gap:8px; padding:16px;
+  width:min(320px, 100%);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, var(--brand-light) 0%, #fff 100%);
+  box-shadow: var(--shadow-1);
+}
+.five-info .claim{margin:0; font-weight:700; color:var(--blue)}
+.five-info .five{margin:0}
+.five-info .title{margin:0; font-size: clamp(22px, 2.4vw, 28px); line-height:1.2}
+@media (max-width:1024px){ .five-info{justify-self:stretch} }
+
+/* ============ Partner Logos (CSS Marquee) ============ */
+.header-logos-wrap{margin-top: clamp(16px, 3vw, 24px)}
+.logos-swiper-wrap{overflow:hidden; mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%)}
+.logos-marquee{position:relative}
+.logos-marquee .track{
+  display:inline-flex; align-items:center; gap:56px; padding-block:10px;
+  animation: marquee 22s linear infinite;
+}
+.logos-marquee img{width:108px; height:auto; opacity:.9; filter:grayscale(1); transition:opacity .2s ease, filter .2s ease}
+.logos-marquee img:hover{opacity:1; filter:none}
+@keyframes marquee{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@media (prefers-reduced-motion: reduce){
+  .logos-marquee .track{animation:none}
+}
+
+/* ============ Grid Sections (FeatureTiles & Showcase) ============ */
+.title-with-photos-grid-wrap{padding: clamp(32px, 6vw, 72px) var(--pad-x)}
+.three-cols-photos-grid{
+  display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: clamp(16px, 2.2vw, 24px);
+}
+@media (max-width: 1024px){ .three-cols-photos-grid{grid-template-columns:1fr 1fr} }
+@media (max-width: 640px){ .three-cols-photos-grid{grid-template-columns:1fr} }
+
+.box{
+  display:grid; gap:12px; padding:16px; border:1px solid var(--line); border-radius: var(--radius-xl); background:#fff;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.box:hover{box-shadow: var(--shadow-1); transform: translateY(-2px)}
+.box .photo img{border-radius: var(--radius-lg)}
+.box .desc h4{margin:.25rem 0 .25rem 0; font-size:1.125rem; line-height:1.3}
+.box .desc p{margin:0; color:var(--muted)}
+
+/* ============ Two Photos with Text ============ */
+.two-photos-with-text-wrap{padding: clamp(32px, 6vw, 72px) var(--pad-x)}
+.two-photos-with-text{
+  display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: clamp(16px, 2.2vw, 24px);
+}
+.two-photos-with-text.small-left .photo-box:first-child{order:1}
+.two-photos-with-text.small-right .photo-box:first-child{order:2}
+@media (max-width: 1024px){
+  .two-photos-with-text{grid-template-columns:1fr}
+  .two-photos-with-text.small-right .photo-box:first-child{order:1}
+}
+.photo-box{display:grid; gap:12px}
+.photo-box .photo img{border-radius: var(--radius-lg); box-shadow:var(--shadow-1)}
+.photo-box .desc h3{margin:0 0 .25rem 0; font-size:1.375rem}
+.photo-box .desc p{margin:0; color:var(--muted)}
+
+/* ============ Photo with Text (with background) ============ */
+.photo-with-text-wrap{padding: clamp(32px, 6vw, 72px) var(--pad-x)}
+.photo-with-text{
+  display:grid; align-items:center; grid-template-columns: 1.1fr 0.9fr; gap: clamp(16px, 2.2vw, 24px);
+  background: linear-gradient(180deg, #fafbff 0%, #fff 100%); border-radius: var(--radius-xl); padding: clamp(16px, 3vw, 24px);
+  border:1px solid var(--line);
+}
+.photo-with-text.right-photo .desc{order:1}
+.photo-with-text.right-photo .photo{order:2}
+@media (max-width: 1024px){ .photo-with-text{grid-template-columns:1fr} }
+
+/* ============ Success Stories / Testimonials ============ */
+.success-stories-wrap{padding: clamp(32px, 6vw, 72px) var(--pad-x)}
+.success-stories-content h2{margin:0 0 16px 0}
+.success-stories-grid{
+  display:grid; gap: clamp(16px, 2.2vw, 24px);
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
+@media (max-width: 900px){ .success-stories-grid{grid-template-columns:1fr} }
+.success-story-item{
+  display:grid; grid-template-columns: 1fr; gap: 10px; border:1px solid var(--line); border-radius: var(--radius-xl); padding: 12px; background:#fff;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.success-story-item:hover{transform:translateY(-2px); box-shadow:var(--shadow-1)}
+.success-story-item .photo img{border-radius: var(--radius-lg)}
+
+/* ============ Section Spacing Variants ============ */
+.title-with-buttons-wrap{padding: clamp(24px, 5vw, 56px) var(--pad-x)}
+.title-with-buttons{display:grid; gap:12px; justify-items:center; text-align:center}
+
+/* ============ Footer ============ */
+.site-footer{background:#0f172a; color:#e2e8f0; padding:40px 0}
+.footer-inner{max-width:var(--maxw-wide); margin:0 auto; padding:0 var(--pad-x); display:grid; gap:16px}
+.site-footer a{color:#e2e8f0; opacity:.9; text-decoration:none}
+.site-footer a:hover{opacity:1}
+
+/* ============ Links in Body Copy ============ */
+a{color:var(--blue); text-underline-offset: 3px}
+a:hover{text-decoration:underline}
+
+/* ============ Focus Visibility ============ */
+:focus-visible{outline: 3px solid var(--blue); outline-offset: 2px}
+
