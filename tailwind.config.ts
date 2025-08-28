@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,15 +55,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				// ORPEAKS brand colors
+				orpeaks: {
+					'deep-pine': 'hsl(var(--orpeaks-deep-pine))',
+					'section-bg': 'hsl(var(--orpeaks-section-bg))',
+					'border': 'hsl(var(--orpeaks-border))',
+					'text-main': 'hsl(var(--orpeaks-text-main))',
+					'text-muted': 'hsl(var(--orpeaks-text-muted))',
+					'accent': 'hsl(var(--orpeaks-accent))',
+					'accent-hover': 'hsl(var(--orpeaks-accent-hover))',
 				}
 			},
 			borderRadius: {
