@@ -5,12 +5,11 @@ import LaunchStrip from "@/components/LaunchStrip";
 import FeatureTiles from "@/components/FeatureTiles";
 import SolutionHeader from "@/components/SolutionHeader";
 import DeepDives from "@/components/DeepDives";
-import UseCaseGrid from "@/components/UseCaseGrid";
-import StoriesGrid from "@/components/StoriesGrid";
 import MenaFocus from "@/components/MenaFocus";
 import Testimonial from "@/components/Testimonial";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   return (
@@ -44,14 +43,13 @@ const Index = () => {
         <FeatureTiles />
         <SolutionHeader />
         <DeepDives />
-        <UseCaseGrid />
-        <StoriesGrid />
         <MenaFocus />
         <Testimonial />
         <FinalCta />
       </main>
       
       <Footer />
+      <Toaster />
     </div>
   );
 };
