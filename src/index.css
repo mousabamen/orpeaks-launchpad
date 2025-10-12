@@ -2,61 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ORPEAKS Design System - Dark theme optimized for MENA eCommerce platform */
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
 
 @layer base {
   :root {
-    /* ORPEAKS Brand Colors (HSL) */
-    --orpeaks-background: 0 0% 95%; /* #f3f3f3 - Page background */
-    --orpeaks-section-bg: 0 0% 100%; /* #ffffff - Section/Card background */
-    --orpeaks-border: 0 0% 90%; /* #e5e5e5 - Borders */
-    --orpeaks-text-main: 0 0% 10%; /* #1a1a1a - Main text */
-    --orpeaks-text-muted: 0 0% 40%; /* #666666 - Muted text */
-    --orpeaks-accent: 154 89% 58%; /* Brand green */
-    --orpeaks-accent-hover: 154 75% 52%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
 
-    /* Semantic design tokens */
-    --background: var(--orpeaks-background);
-    --foreground: var(--orpeaks-text-main);
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
 
-    --card: var(--orpeaks-section-bg);
-    --card-foreground: var(--orpeaks-text-main);
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
 
-    --popover: var(--orpeaks-section-bg);
-    --popover-foreground: var(--orpeaks-text-main);
+    --primary: 169 36% 14%;
+    --primary-foreground: 0 0% 98%;
 
-    --primary: var(--orpeaks-accent);
-    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --secondary: var(--orpeaks-section-bg);
-    --secondary-foreground: var(--orpeaks-text-main);
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
 
-    --muted: var(--orpeaks-section-bg);
-    --muted-foreground: var(--orpeaks-text-muted);
-
-    --accent: var(--orpeaks-accent);
-    --accent-foreground: 0 0% 100%;
+    --accent: 240 5% 96%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: var(--orpeaks-border);
-    --input: var(--orpeaks-border);
-    --ring: var(--orpeaks-accent);
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 169 36% 14%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Animation easing */
-    --ease-orpeaks: cubic-bezier(0.16, 1, 0.3, 1);
+    /* Gradient tokens */
+    --gradient-brand: linear-gradient(135deg, hsl(243 75% 59%), hsl(281 83% 56%), hsl(328 86% 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(240 5% 98%), hsl(0 0% 100%));
+    
+    /* Shadow tokens */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1);
+    
+    /* Transition tokens */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* MENA badge colors */
-    --mena-ring: var(--orpeaks-accent);
-    --mena-dots: var(--orpeaks-accent);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 169 36% 14%;
   }
 
-  /* RTL support with logical properties */
-  .rtl {
-    direction: rtl;
+  .dark {
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 169 36% 70%;
+    
+    --gradient-brand: linear-gradient(135deg, hsl(243 75% 59%), hsl(281 83% 56%), hsl(328 86% 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(240 4% 12%), hsl(0 0% 9%));
+    
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 169 36% 70%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 169 36% 70%;
   }
 }
 
@@ -66,73 +111,6 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
-  }
-}
-
-@layer utilities {
-  /* Hero stagger animation classes */
-  .hero-word {
-    @apply opacity-0 translate-y-4 transition-all duration-700;
-    transition-timing-function: var(--ease-orpeaks);
-  }
-  
-  .hero-word.animate-in {
-    @apply opacity-100 translate-y-0;
-  }
-  
-  /* Card hover effects */
-  .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl;
-    transition-timing-function: var(--ease-orpeaks);
-  }
-  
-  /* Button variants */
-  .btn-primary {
-    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md transition-colors duration-200 transform transition-transform;
-  }
-
-  .btn-primary:hover {
-    background-color: hsl(var(--orpeaks-accent-hover));
-    @apply scale-105;
-  }
-
-  .btn-outline {
-    @apply border border-primary text-primary bg-transparent font-semibold px-6 py-3 rounded-md transition-all duration-200 hover:bg-primary/10 transform transition-transform;
-  }
-
-  .btn-outline:hover {
-    @apply scale-105;
-  }
-  
-  /* MENA badge */
-  .mena-badge {
-    @apply relative w-24 h-24 rounded-full border-2 border-primary flex items-center justify-center;
-    background: radial-gradient(circle at center, transparent 40%, hsl(var(--orpeaks-accent) / 0.1) 40%);
-  }
-  
-  .mena-badge::before {
-    content: '';
-    @apply absolute inset-2 rounded-full;
-    background: radial-gradient(circle, hsl(var(--orpeaks-accent)) 1px, transparent 1px);
-    background-size: 8px 8px;
-    opacity: 0.3;
-  }
-  
-  /* Responsive container */
-  .container-orpeaks {
-    @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-  
-  /* Reduced motion support */
-  @media (prefers-reduced-motion: reduce) {
-    .hero-word {
-      @apply opacity-100 translate-y-0;
-      transition: none;
-    }
-    
-    .card-hover {
-      @apply hover:translate-y-0;
-    }
+    @apply bg-background text-foreground;
   }
 }
