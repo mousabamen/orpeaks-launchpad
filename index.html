@@ -1,401 +1,282 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ORPEAKS - Your Business, Your Store, Your Future</title>
-  <link rel="preload" as="image" href="/public/assets/images/hero/visual-desktop.webp" imagesrcset="/public/assets/images/hero/visual-desktop.webp 1848w, /public/assets/images/hero/visual-tablet.webp 1000w" />
-  <link rel="stylesheet" href="/css/spree-theme.css" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orpeaks</title>
+    <meta
+      name="description"
+      content="Launch fast on a flexible core, then tailor storefronts, catalogs, checkout and integrations as you scale — with Orpeaks."
+    />
 
-  <!-- ========== 1) Navigation ========== -->
-  <header id="Navigation" class="site-header alignfull" role="banner">
-    <div class="nav-inner">
-      <a class="brand" href="/">ORPEAKS</a>
-      <nav class="primary-nav" aria-label="Primary">
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#resources">Resources</a>
-      </nav>
-      <div class="nav-cta">
-        <a href="#contact">Contact Us</a>
-        <a href="#login">Log in</a>
-        <a href="#start" class="btn blue">Start free trial</a>
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="/images/store-preview.png" />
+    <link rel="preload" as="image" href="/images/google-analytics.svg" />
+    <link rel="preload" as="image" href="/images/apple-pay.svg" />
+    <link rel="preload" as="image" href="/images/stripe.png" />
+    <link rel="preload" as="image" href="/images/klaviyo.png" />
+    <link rel="preload" as="image" href="/images/meta.png" />
+    <link rel="preload" as="image" href="/images/paypal.svg" />
+    <link rel="preload" as="image" href="/images/godaddy.png" />
+
+    <!-- Preload Scripts -->
+    <link rel="modulepreload" href="/assets/entry.client-BWBOP0Ds.js" />
+    <link rel="modulepreload" href="/assets/chunk-PVWAREVJ-BGDX7Rsd.js" />
+    <link rel="modulepreload" href="/assets/root-C9g5bwsa.js" />
+    <link rel="modulepreload" href="/assets/home-DhVP7J82.js" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/root-NR3Noz3q.css" />
+  </head>
+
+  <body>
+    <div class="min-h-screen bg-white text-gray-900">
+      <a
+        href="#main"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 bg-black text-white px-3 py-2 rounded"
+        >Skip to content</a
+      >
+
+      <!-- Top Banner -->
+      <div
+        class="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white"
+      >
+        <div
+          class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 text-center text-sm"
+        >
+          <span class="font-medium">New release:</span> Orpeaks 1.0 is here —
+          faster admin, sections-based pages, and easier integrations.
+          <a
+            href="#release"
+            class="inline-flex items-center font-semibold underline underline-offset-4 ml-1"
+            >Learn more
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-right ml-0.5 h-4 w-4"
+            >
+              <path d="m9 18 6-6-6-6"></path></svg
+          ></a>
+        </div>
       </div>
-    </div>
-  </header>
 
-  <main id="main-content">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-40 backdrop-blur border-b border-gray-100 bg-white/70"
+      >
+        <nav
+          aria-label="Primary"
+          class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="h-8 w-8 rounded-lg bg-[#192c28] flex items-center justify-center"
+              aria-label="Orpeaks logo"
+            >
+              <svg
+                viewBox="0 0 430 430"
+                class="h-5 w-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <g id="Layer_1">
+                  <g>
+                    <path
+                      d="M375.55,154.94c-21.53,31.28-62.32,81.9-85.82,109.47-.08.1-.18.19-.28.27-32.53,26.4-79.07,27.63-112.8,2.57-3.85-2.86-7.02-6.2-10.67-9.16-.89-.72-2.19-.56-2.89.34l-45.37,58.78s-32.03,38.96-46.47,56.52c-1.28,1.56-3.77.2-3.14-1.72,5.2-15.9,13.08-48.46,4.89-82.48-.12-.49.03-1.22.33-1.62l89.46-117.87c.35-.45.88-.72,1.45-.72h0c.51.25.94.47,1.45.72l38.94,50.99c.08.1.16.2.26.28,15.2,14.07,38.9,13.83,53.62-.77l.13-.14c14.04-15.93,15.31-16.53,27.91-33.64"
+                    ></path>
+                    <path
+                      d="M359.36,177.37l9.52-12.96s29.46-38.67,42.74-56.09c1.18-1.55-.7-3.48-2.37-2.44-13.87,8.61-42.91,23.72-77.09,24.55-.49.01-1.15.32-1.45.7l-44.93,56.69"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="font-semibold tracking-tight">Orpeaks</span>
+          </div>
 
-    <!-- ========== 2) Hero ========== -->
-    <section id="Hero" class="home-header-wrap alignfull text-align-left">
-      <div class="home-header">
-        <div class="container-flex">
-          <div class="desc-wrap">
-            <div class="desc">
-              <!-- keep your copy exactly: caption, h1, paragraph(s), buttons -->
-              <p class="caption"></p>
-              <h1>Be the next big thing</h1>
-              <p>ORPEAKS gives you everything you need to start and grow your online business in the MENA region.</p>
-              <div class="buttons-wrap">
-                <a href="#start" class="btn blue large">Start for Free</a>
-                <a href="#features" class="btn white large">Explore Features</a>
+          <div class="hidden md:flex items-center gap-3">
+            <button
+              data-testid="open-lead-form"
+              class="inline-flex items-center rounded-xl bg-black text-white px-4 py-2 text-sm font-semibold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+            >
+              Get started
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-right ml-1 h-4 w-4"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <main id="main">
+        <!-- Hero Section -->
+        <section class="relative isolate overflow-hidden">
+          <div class="absolute inset-0 -z-10 bg-gradient-to-b from-gray-50 to-white"></div>
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <h1
+                  class="text-4xl sm:text-5xl/tight font-bold tracking-tight"
+                >
+                  The commerce platform that grows with your brand
+                </h1>
+                <p class="mt-4 text-lg text-gray-600">
+                  Launch fast on a flexible core, then tailor storefronts,
+                  catalogs, checkout and integrations as you scale — with
+                  Orpeaks.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                  <button
+                    data-testid="open-lead-form"
+                    class="inline-flex items-center rounded-xl bg-black text-white px-5 py-3 font-semibold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                  >
+                    Get started
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-right ml-2 h-5 w-5"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="mt-8 text-sm text-gray-500">
+                  No credit card required • Free trial • Cloud or self-hosted
+                </div>
               </div>
-            </div>
 
-            <!-- hero visual -->
-            <div class="visual">
-              <picture>
-                <source width="1848" height="2020" srcset="/public/assets/images/hero/visual-desktop.webp" media="(min-width: 1025px)">
-                <source width="1000" height="1093" srcset="/public/assets/images/hero/visual-tablet.webp" media="(min-width: 768px) and (max-width: 1024px)">
-                <img width="924" height="1010" decoding="async" loading="eager" src="/public/assets/images/hero/visual-fallback.webp" alt="" />
-              </picture>
-            </div>
-
-            <!-- partner logos marquee -->
-            <div class="header-logos-wrap" aria-label="Trusted by logos">
-              <p class="caption"></p>
-              <div class="logos-swiper-wrap">
-                <div class="logos-marquee" role="presentation">
-                  <div class="track">
-                    <!-- 1st sequence -->
-                    <img width="108" height="40" src="/public/assets/images/logos/kfc.svg" alt="KFC">
-                    <img width="108" height="40" src="/public/assets/images/logos/meundies.svg" alt="MeUndies">
-                    <img width="108" height="40" src="/public/assets/images/logos/mitchells.svg" alt="Mitchells">
-                    <img width="108" height="40" src="/public/assets/images/logos/on-cloud.svg" alt="On">
-                    <img width="108" height="40" src="/public/assets/images/logos/paneco.svg" alt="Paneco">
-                    <img width="108" height="40" src="/public/assets/images/logos/square.svg" alt="Square">
-                    <img width="108" height="40" src="/public/assets/images/logos/stylemyle.svg" alt="Stylemyle">
-                    <img width="108" height="40" src="/public/assets/images/logos/bonobos.svg" alt="Bonobos">
-                    <img width="108" height="40" src="/public/assets/images/logos/bookshop.svg" alt="Bookshop">
-                    <img width="108" height="40" src="/public/assets/images/logos/godaddy.svg" alt="GoDaddy">
-                    <img width="108" height="40" src="/public/assets/images/logos/goop.svg" alt="Goop">
-                    <img width="108" height="40" src="/public/assets/images/logos/huckberry.svg" alt="Huckberry">
-                    <!-- 2nd sequence (duplicate for seamless loop, aria-hidden) -->
-                    <img width="108" height="40" src="/public/assets/images/logos/kfc.svg" alt="KFC" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/meundies.svg" alt="MeUndies" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/mitchells.svg" alt="Mitchells" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/on-cloud.svg" alt="On" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/paneco.svg" alt="Paneco" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/square.svg" alt="Square" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/stylemyle.svg" alt="Stylemyle" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/bonobos.svg" alt="Bonobos" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/bookshop.svg" alt="Bookshop" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/godaddy.svg" alt="GoDaddy" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/goop.svg" alt="Goop" aria-hidden="true">
-                    <img width="108" height="40" src="/public/assets/images/logos/huckberry.svg" alt="Huckberry" aria-hidden="true">
+              <div class="lg:justify-self-end">
+                <div
+                  class="relative rounded-2xl border border-gray-200 bg-white p-3 shadow-sm"
+                >
+                  <img
+                    src="/images/store-preview.png"
+                    alt="Dashboard preview"
+                    class="rounded-xl w-full h-auto"
+                  />
+                  <div
+                    class="absolute -bottom-6 -left-6 hidden sm:block w-40 rounded-xl border border-gray-200 bg-white p-2 shadow"
+                  >
+                    <img
+                      src="/images/store-preview.png"
+                      alt="Storefront preview"
+                      class="rounded-lg w-full h-auto"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <!-- release badge (right column) -->
-          <aside class="five-info" aria-label="Release highlight">
-            <p class="claim">Bigger, Better, More</p>
-            <p class="five"><img width="120" height="120" decoding="async" loading="lazy" src="/public/assets/images/launch/badge.webp" alt=""></p>
-            <p class="title">The Biggest<br>Release Ever</p>
-            <a href="#" class="btn-icon lightblue2" aria-label="Learn more about the release">
-              <img width="24" height="24" src="/public/assets/icons/arrow-right-top.svg" alt="">
-            </a>
-          </aside>
-        </div>
-      </div>
-    </section>
+        <!-- Trusted by section -->
+        <section class="py-12 border-t border-gray-100">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500">
+              Trusted by teams worldwide
+            </p>
+            <div
+              class="mt-6 grid grid-cols-7 gap-6 items-center opacity-70"
+            >
+              <div class="flex items-center justify-center h-10">
+                <img
+                  src="/images/google-analytics.svg"
+                  alt="Google"
+                  class="max-h-8 object-contain grayscale opacity-80 hover:opacity-100 transition"
+                />
+              </div>
+              <div class="flex items-center justify-center h-10">
+                <img
+                  src="/images/apple-pay.svg"
+                  alt="Apple"
+                  class="max-h-8 object-contain grayscale opacity-80 hover:opacity-100 transition"
+                />
+              </div>
+              <div class="flex items-center justify-center h-10">
+                <img
+                  src="/images/stripe.png"
+                  alt="Stripe"
+                  class="max-h-8 object-contain grayscale opacity-80 hover:opacity-100 transition"
+                />
+              </div>
+              <div class="flex items-center justify-center h-10">
+                <img
+                  src="/images/klaviyo.png"
+                  alt="Klaviyo"
+                  class="max-h-8 object-contain grayscale opacity-80 hover:opacity-100 transition"
+                />
+              </div>
+              <div class="flex items-center justify-center h-10">
+                <img
+                  src="/images/meta.png"
+                  alt="Meta"
+                  class="max-h-8 object-contain grayscale opacity-80 hover:opacity-100 transition"
+                />
+              </div>
+              <div class="flex items-center justify-center h-10">
+                <img
+                  src="/images/paypal.svg"
+                  alt="PayPal"
+                  class="max-h-8 object-contain grayscale opacity-80 hover:opacity-100 transition"
+                />
+              </div>
+              <div class="flex items-center justify-center h-10">
+                <img
+                  src="/images/godaddy.png"
+                  alt="GoDaddy"
+                  class="max-h-8 object-contain grayscale opacity-80 hover:opacity-100 transition"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <!-- ========== 3) WhyOrpeaks ========== -->
-    <section id="WhyOrpeaks" class="title-with-buttons-wrap alignwide text-align-left">
-      <div class="title-with-buttons">
-        <div class="title-wrap">
-          <p class="caption"></p>
-          <h2>Why ORPEAKS?</h2>
-          <p>ORPEAKS is built for entrepreneurs, creators, and businesses who want simplicity without limits. Our platform combines powerful tools with an easy experience, so you can focus on growing your business—not struggling with tech.</p>
-        </div>
-        <div class="buttons-wrap center">
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== 4) LaunchStrip (thin, full-width) ========== -->
-    <section id="LaunchStrip" class="launch-strip alignfull" aria-label="Launch announcement">
-      <div class="launch-inner alignwide">
-        <span class="pill">New</span>
-        <span class="launch-text">The Biggest Release Ever</span>
-        <a class="btn-link" href="#">Read more</a>
-      </div>
-    </section>
-
-    <!-- ========== 5) FeatureTiles (3-column grid) ========== -->
-    <section id="FeatureTiles" class="title-with-photos-grid-wrap alignwide text-align-left">
-      <div class="title-wrap">
-        <h2>Features</h2>
-        <p></p>
-      </div>
-
-      <div class="three-cols-photos-grid">
-        <div class="box">
-          <div class="photo">
-            <img width="843" height="800" decoding="async" loading="lazy" src="/public/assets/images/features/admin-dashboard.webp" alt="">
-          </div>
-          <div class="desc">
-            <h4>Admin Dashboard</h4>
-            <p>Manage your operations with an intuitive, real-time dashboard.</p>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="photo"><img width="843" height="800" decoding="async" loading="lazy" src="/public/assets/images/features/nocode-storefront.webp" alt=""></div>
-          <div class="desc">
-            <h4>No-code Storefront Customization</h4>
-            <p>Design your storefront with drag-and-drop simplicity—no coding required.</p>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="photo"><img width="843" height="800" decoding="async" loading="lazy" src="/public/assets/images/features/inventory-management.webp" alt=""></div>
-          <div class="desc">
-            <h4>Inventory Management</h4>
-            <p>Track stock levels and organize products effortlessly across locations.</p>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="photo"><img width="843" height="800" decoding="async" loading="lazy" src="/public/assets/images/features/multi-store.webp" alt=""></div>
-          <div class="desc">
-            <h4>Multi-Store Support</h4>
-            <p>Run multiple storefronts from a single account with centralized control.</p>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="photo"><img width="843" height="800" decoding="async" loading="lazy" src="/public/assets/images/features/checkout.webp" alt=""></div>
-          <div class="desc">
-            <h4>Checkout System</h4>
-            <p>Streamlined checkout optimized for conversions on any device.</p>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="photo"><img width="843" height="800" decoding="async" loading="lazy" src="/public/assets/images/features/payments.webp" alt=""></div>
-          <div class="desc">
-            <h4>Payment Integrations</h4>
-            <p>Accept payments with ease through built-in gateways and providers.</p>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="photo"><img width="843" height="800" decoding="async" loading="lazy" src="/public/assets/images/features/refunds-orders.webp" alt=""></div>
-          <div class="desc">
-            <h4>Refunds and Order Management</h4>
-            <p>Process returns and manage orders with clear, simple workflows.</p>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="photo"><img width="843" height="800" decoding="async" loading="lazy" src="/public/assets/images/features/email-marketing.webp" alt=""></div>
-          <div class="desc">
-            <h4>Email Marketing</h4>
-            <p>Engage customers and automate campaigns with powerful email tools.</p>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="photo"><img width="843" height="800" decoding="async" loading="lazy" src="/public/assets/images/features/api-integrations.webp" alt=""></div>
-          <div class="desc">
-            <h4>API Integrations</h4>
-            <p>Connect your tech stack through flexible, well-documented APIs.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== 6) CommerceShowcase (like “This is what you can build…”) ========== -->
-    <section id="CommerceShowcase" class="title-with-photos-grid-wrap alignwide text-align-left">
-      <div class="title-wrap">
-        <h2>Built for modern commerce</h2>
-      </div>
-      <div class="three-cols-photos-grid">
-        <div class="box">
-          <div class="desc">
-            <h4>All-in-one commerce tools</h4>
-            <p>Manage products, payments, and marketing from a single dashboard—just like hosted platforms such as Shopify.</p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="desc">
-            <h4>Open-source flexibility</h4>
-            <p>Customize every part of your store with an open architecture inspired by frameworks like Spree Commerce.</p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="desc">
-            <h4>Built to scale</h4>
-            <p>From first sale to global brand, our infrastructure grows with you.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== 7) SolutionHeader ========== -->
-    <section id="SolutionHeader" class="title-with-buttons-wrap alignwide text-align-left">
-      <div class="title-with-buttons">
-        <div class="title-wrap">
-          <p class="caption">Solution</p>
-          <h2>ORPEAKS is modular and customizable so you can build exactly what you need</h2>
-          <p></p>
-        </div>
-        <div class="buttons-wrap center">
-          <a href="#" class="btn blue large">See all Features</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== 8) DeepDives (sequence of Spree-style blocks) ========== -->
-    <section id="DeepDives" class="deepdives">
-      <section class="two-photos-with-text-wrap alignwide text-align-left">
-        <div class="two-photos-with-text small-left">
-          <div class="photo-box">
-            <div class="photo"><img width="1024" height="632" decoding="async" loading="lazy" src="/public/assets/images/deepdives/storefront.png" alt=""></div>
-            <div class="desc"><h3>Storefront customization</h3><p>Easily customize your homepage, product listings and product detail pages. Use the default storefront or connect your own next.js frontend application.</p></div>
-          </div>
-          <div class="photo-box">
-            <div class="photo"><img width="1024" height="431" decoding="async" loading="lazy" src="/public/assets/images/deepdives/multi-region.png" alt=""></div>
-            <div class="desc"><h3>Multi-region &amp; Multi-store</h3><p>Manage unlimited products and variants individually or in bulk. Categorize, label, add custom attributes. Generate gift cards or discounts with a robust promo rule engine</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="photo-with-text-wrap is-style-with-bck alignwide text-align-left">
-        <div class="photo-with-text right-photo">
-          <div class="desc"><h3>Inventory management</h3><p>Manage stock levels across sales channels and locations. Track stock movements, receive stock, make transfers. Make products available or discontinued on a given date.</p></div>
-          <div class="photo"><img width="1024" height="431" decoding="async" loading="lazy" src="/public/assets/images/deepdives/inventory.png" alt=""></div>
-        </div>
-      </section>
-
-      <section class="two-photos-with-text-wrap alignwide text-align-left">
-        <div class="two-photos-with-text small-right">
-          <div class="photo-box">
-            <div class="photo"><img width="1024" height="431" decoding="async" loading="lazy" src="/public/assets/images/deepdives/cart-checkout.png" alt=""></div>
-            <div class="desc"><h3>Cart &amp; Checkout</h3><p>Customize checkout to reflect your business logic. Style it to be on-brand. Manage shipping and taxes calculations. Enable fast checkout with Apple Pay or Google Pay.</p></div>
-          </div>
-          <div class="photo-box">
-            <div class="photo"><img width="1024" height="632" decoding="async" loading="lazy" src="/public/assets/images/deepdives/payments.png" alt=""></div>
-            <div class="desc"><h3>Payments &amp; Refunds</h3><p>Capture payments with cards, Apple Pay, Google Pay, BNPL, local bank transfers and redirects, on terms. Use one or multiple payment processors. Automate refunds.</p></div>
-          </div>
-        </div>
-      </section>
-    </section>
-
-    <!-- ========== 9) MenaFocus ========== -->
-    <section id="MenaFocus" class="title-with-photos-grid-wrap alignwide text-align-left" dir="auto">
-      <div class="title-wrap">
-        <h2>Built for the MENA region</h2>
-        <p>ORPEAKS puts your store front and center for customers across the Middle East and North Africa, with localized payment methods and Arabic language support.</p>
-      </div>
-      <div class="three-cols-photos-grid">
-        <div class="box">
-          <div class="desc">
-            <h4>Local payment methods</h4>
-            <p>Support for popular regional payment options</p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="desc">
-            <h4>Arabic-first interface</h4>
-            <p>Fully RTL supported dashboard and storefront</p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="desc">
-            <h4>Regional compliance</h4>
-            <p>Built to meet local business regulations</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== 10) Testimonial / Success Stories ========== -->
-    <section id="Testimonial" class="success-stories-wrap alignwide text-align-left">
-      <div class="success-stories-content">
-        <h2></h2>
-        <div class="buttons-wrap center">
-        </div>
-        <div class="success-stories-grid">
-          <div class="success-story-item">
-            <p>"ORPEAKS has given us the platform we needed to expand our business across the MENA region with ease."</p>
-            <p>Ahmed Al-Mansoori, Founder, Desert Designs</p>
-          </div>
-          <div class="success-story-item">
-            <p>5,000+ active stores — Powered by ORPEAKS in the MENA region</p>
-          </div>
-          <div class="success-story-item">
-            <p>99.9% uptime — Reliable hosting for your business</p>
-          </div>
-          <div class="success-story-item">
-            <p>0% transaction fees — On ORPEAKS payment processing</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== 11) FinalCta ========== -->
-    <section id="FinalCta" class="title-with-buttons-wrap alignwide text-align-left">
-      <div class="title-with-buttons">
-        <div class="title-wrap">
-          <h2>Ready to start your business journey?</h2>
-          <p>Join thousands of entrepreneurs who have chosen ORPEAKS to power their online stores.</p>
-        </div>
-        <div class="buttons-wrap center">
-          <a href="#" class="btn blue large">Get Started Today</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ========== 12) Footer ========== -->
-  <footer id="Footer" class="site-footer alignfull" role="contentinfo">
-    <div class="footer-inner">
-      <div class="brand">
-        <p>ORPEAKS</p>
-        <p>Commerce platform for the MENA region.</p>
-      </div>
-      <div class="links">
-        <div class="col">
-          <h4>Product</h4>
-          <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Integrations</a></li>
-            <li><a href="#">Templates</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Docs</a></li>
-            <li><a href="#">Guides</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="copy">
-        <p>© 2025 ORPEAKS. All rights reserved.</p>
-      </div>
+        <!-- The rest of your sections (release, platform, solutions, subscribe, footer) continue here... -->
+      </main>
     </div>
-  </footer>
-
-  <script src="/js/spree-ui.js" defer></script>
-</body>
+  </body>
 </html>
